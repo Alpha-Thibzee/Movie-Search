@@ -9,22 +9,25 @@
 }
 .test {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -30%);
   
 }
 @keyframes glow {
     from {
-      text-shadow: 0 0 50px #ff0909;
+      text-shadow: 0 0 50px #45da24;
+      transform: scale(1.2);
     }
     to {
       text-shadow: 1px 10px 80px #09e9ed, 0 0 70px #ed01aa;
+      transform: scale(3);
     }
   }
 #livetimer{
-    color: rgb(201, 88, 88);
+    color: rgb(38, 41, 43);
     font-size: 100px;
     animation: glow 1s ease-in-out infinite alternate;
-    position:absolute;
+    
+  
 }

@@ -13,7 +13,7 @@ export class MovieComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.getMovieData();
+    // this.getMovieData();
   }
   getMovieData() : void {
     fetch(`http://www.omdbapi.com/?apikey=2f2d427&s=${this.movie}`)
@@ -30,7 +30,7 @@ export class MovieComponent implements OnInit {
     
     //this.movieData.imdbID = (this.movieData.imdbID);
     this.movieData.Title = (this.movieData.Title);
-    this.movieData.Country = (this.movieData.Country);
+    this.movieData.Type = (this.movieData.Type);
     this.movieData.Year = (this.movieData.Year);
     this.movieData.Poster = (this.movieData.Poster);
   }
