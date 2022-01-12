@@ -1,1 +1,39 @@
-<p>movie works!</p>
+
+        <div class="row flex  text-center mt-5 ">
+            <h2 class="text-decoration-none text-center mt-5 ">Film</h2>
+
+            <div class="col-md-2 flex flex-column mx-auto">
+                <form (submit)="searchMovie()" class="mt-2 mx-auto">
+                    <div class="row mb-3">
+                    <input type="text" name="movie" [(ngModel)]="movie" class="form-control fw-bolder fs-4 col-md-3 text-center">
+                    </div>
+                    <div class="row">
+                    <input type="submit" value="Rechercher" class="form-control btn btn-primary btn-lg mt-2 fw-bolder col-md-3">
+                     </div>
+                </form>
+            </div>
+        </div> 
+            <div class="row flex text-center mt-3 ">
+            <div *ngFor="let movie of movieData" class="col-md-3 mx-auto fw-bold border border-4 rounded mt-3 text-white text-center">
+                
+                
+                <div class="">Nom du film : {{movie.Title}}</div>
+                <div class="">Pays : {{movie.Country}}</div>
+                <div class="">Année : {{movie.Year}}</div>
+                <div class="">Poster :</div>
+                <img src="{{movie.Poster}}" class="mb-2">
+                
+
+            </div>
+        </div>
+
+        
+
+    
+
+     
+
+    
+
+
+

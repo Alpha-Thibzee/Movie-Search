@@ -1,10 +1,18 @@
-.fond{
+#fond{
   background-image: url(../../assets/Sanstitre-1.jpg);
   background-size: cover;
   height: 100vh;
   width: auto;
   background-position:center;
   background-repeat: no-repeat;
+ 
+}
+.test {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
 }
 @keyframes glow {
     from {
@@ -15,7 +23,7 @@
     }
   }
 #livetimer{
-    color: rgb(65, 65, 65);
+    color: rgb(201, 88, 88);
     font-size: 100px;
     animation: glow 1s ease-in-out infinite alternate;
     position:absolute;
