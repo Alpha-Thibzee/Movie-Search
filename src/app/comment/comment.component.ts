@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Todo } from 'src/models/comment';
+import { TodoService } from '../services/comment.service';
 
 @Component({
   selector: 'app-comment',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommentComponent implements OnInit {
 
-  constructor() { }
+  public allTodos! : Todo[];
+
+  constructor(private todoService : TodoService) { }
 
   ngOnInit(): void {
+  }
+
+  addToDo(form:any) {
+    this.todoService.createTodo(form.value);
+    form.reset();
+    this.allTodos = this.todoService.getTodos();
+    //console.log(form.value);
   }
 
 }

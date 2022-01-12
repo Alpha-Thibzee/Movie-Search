@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieComponent implements OnInit {
 
-  movie : string = 'Die Hard';
+  movie : string = '';
   movieData : any;
   constructor() { }
 
@@ -33,16 +33,15 @@ export class MovieComponent implements OnInit {
     this.movieData.Country = (this.movieData.Country);
     this.movieData.Year = (this.movieData.Year);
     this.movieData.Poster = (this.movieData.Poster);
-  
-  
-  
-  
   }
-    
-    
-
     searchMovie() : void{
+      //this.getMovieData();
+      if (this.movie == '' || this.movie.length <= 2) {
+        alert('Mets un film valide batard');
+        
+      }else{
       this.getMovieData();
     }
+    } 
 } 
 //

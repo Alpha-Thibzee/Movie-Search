@@ -1,1 +1,37 @@
-<p>comment works!</p>
+<main>
+    
+    
+    <form #f="ngForm" (submit)="addToDo(f)" class="d-flex flex-column col-md-3 mx-auto my-3 mt-5 ">
+
+       <!-- ? Titre de la chose à faire -->
+
+        <label class="mt-5 fs-5 fw-bold"for="title">Vous êtes :</label>
+        <input class="fw-bold mt-1 border border-dark border-3 fs-4" id="title" type="text" ngModel name="title" >
+
+       <!-- ? Liste déroulante pour choisir la catégorie de la tache -->
+
+       <!--<label for="categorie">Catégories :</label>
+       <select class="border border-dark border-3 fs-4" name="" id="categorie" ngModel name="categorie">
+            <option value="">----</option>
+            <option value="Pro">Professionnel</option>
+            <option value="Hobby">Loisir</option>
+            <option value="CleaningTask">Tâche ménagère</option>
+       </select>-->
+
+       <!-- ? Description de la tâche -->
+
+       <label class="fs-5 fw-bold" for="description">Votre message :</label>
+       <textarea class="fw-bold border border-dark border-3 fs-4" id="description" rows="3" ngModel name="description" placeholder="Votre message"></textarea>
+       
+       <!-- ? Boutton -->
+
+       <button type="submit" class="mt-3 btn btn-success border border-dark border-3" >Ajouter</button>
+       <button type="reset" class="mt-3 btn btn-danger border border-dark border-3" >Effacer</button>
+
+    </form>
+<div class="d-flex flex-column col-md-8 text-center mx-auto my-3">
+    <app-comment-list *ngIf="allTodos" [allTodos]="allTodos"></app-comment-list>
+</div>
+
+</main>
+

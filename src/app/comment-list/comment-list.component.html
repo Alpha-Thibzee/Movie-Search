@@ -1,0 +1,5 @@
+<h2 class="text-center mt-2 text-decoration-underline">Le livre d'or : </h2>
+
+<ul>
+<li id="liste" *ngFor="let todo of allTodos" class="mt-2 text-center fw-bold"> <app-comment-info [todo]= "todo" (deleteTodo)="deleteTodo($event)"></app-comment-info> </li>
+</ul>
