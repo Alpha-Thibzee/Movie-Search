@@ -1,5 +1,7 @@
-<h2 class="text-center mt-2 text-decoration-underline">Le livre d'or : </h2>
-
-<ul>
-<li id="liste" *ngFor="let todo of allTodos" class="mt-2 text-center fw-bold"> <app-comment-info [todo]= "todo" (deleteTodo)="deleteTodo($event)"></app-comment-info> </li>
-</ul>
+<div class="container-fluid">
+    <h2 class=" mt-2 text-decoration-underline liste-style-none">Le livre d'or : </h2>
+    <div class="row mx-0 mt-2 gx-2 ">
+        <app-comment-info *ngFor="let todo of allTodos" class="mt-2 mb-2 col-md-3 d-flex  fw-bold " [todo]= "todo" (deleteTodo)="deleteTodo($event)"></app-comment-info>
+        
+    </div>
+</div>

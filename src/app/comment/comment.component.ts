@@ -9,6 +9,8 @@ import { TodoService } from '../services/comment.service';
 })
 export class CommentComponent implements OnInit {
 
+  title : string = '';
+  //description : string = '';
   public allTodos! : Todo[];
 
   constructor(private todoService : TodoService) { }
@@ -21,6 +23,8 @@ export class CommentComponent implements OnInit {
     form.reset();
     this.allTodos = this.todoService.getTodos();
     //console.log(form.value);
+    
+  
   }
 
 }

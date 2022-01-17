@@ -1,33 +1,43 @@
-#fond{
+#fond {
   background-image: url(../../assets/Sanstitre-1.jpg);
   background-size: cover;
   height: 100vh;
   width: auto;
-  background-position:center;
+  background-position: center;
   background-repeat: no-repeat;
- 
 }
+
 .test {
   position: absolute;
   top: 30%;
   left: 50%;
   transform: translate(-50%, -30%);
-  
 }
+
 @keyframes glow {
-    from {
-      text-shadow: 0 0 50px #45da24;
-      transform: scale(1.2);
-    }
-    to {
-      text-shadow: 1px 10px 80px #09e9ed, 0 0 70px #ed01aa;
-      transform: scale(3);
-    }
-  }
-#livetimer{
-    color: rgb(38, 41, 43);
-    font-size: 100px;
-    animation: glow 1s ease-in-out infinite alternate;
+  from {
+    text-shadow: 0 0 50px #45da24;
     
+    transform: scale(1.2);
+  }
+  to {
+    text-shadow: 1px 10px 80px #aced09, 0 0 70px #e1ed01;
+    transform: scale(2.5);
+  }
+  to {
+    text-shadow: 1px 10px 80px #8e09ed, 0 0 70px #f60cb3;
+    
+  }
+  to {
+    text-shadow: 1px 10px 80px #091ced, 0 0 70px #01e9ed;
+    
+  }
+}
+
+
+#livetimer {
+  color: black;
+  font-size: 100px;
+  animation: glow 1s ease-in-out infinite alternate;
   
 }
