@@ -16,7 +16,7 @@
 
 @keyframes glow {
   from {
-    text-shadow: 0 0 50px #45da24;
+    text-shadow: 0 0 50px #35cf12;
     
     transform: scale(1.2);
   }
