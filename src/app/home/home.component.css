@@ -15,29 +15,59 @@
 }
 
 @keyframes glow {
-  from {
-    text-shadow: 0 0 50px #35cf12;
-    
-    transform: scale(1.2);
-  }
-  to {
-    text-shadow: 1px 10px 80px #aced09, 0 0 70px #e1ed01;
-    transform: scale(2.5);
-  }
-  to {
-    text-shadow: 1px 10px 80px #8e09ed, 0 0 70px #f60cb3;
-    
-  }
-  to {
-    text-shadow: 1px 10px 80px #091ced, 0 0 70px #01e9ed;
-    
-  }
+  0% { text-shadow: 0 0 50px red; }
+  25% {text-shadow: 0 0 50px orange;}
+  50% { text-shadow: 0 0 50px blue; }
+  75% {text-shadow: 0 0 50px violet;}
+  100% {text-shadow: 0 0 50px green; }
+  105% {text-shadow: 0 0 50px red;}
 }
 
 
 #livetimer {
   color: black;
   font-size: 100px;
-  animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 10s ease-in-out infinite alternate,
+  textcolor 10s ease-in-out infinite alternate;
   
+  
+}
+@keyframes textcolor {
+  0% { color: red;}
+  25% {color: orange;}
+  50% { color: blue; }
+  75% {color: violet;}
+  100% { color: green; }
+  105% {color: red;}
+  
+}
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  
+  100% {
+    transform: scale(2);
+  }
+}
+#livetimer:hover{
+  animation:scale 0.2s ease-in-out alternate forwards,
+  glow 10s ease-in-out infinite alternate,
+  textcolor 10s ease-in-out infinite alternate;
+  cursor:pointer;
+}
+#livetimer:not(:hover){
+  animation: scaledown 0.2s ease-in-out alternate forwards,
+  glow 10s ease-in-out infinite alternate,
+  textcolor 10s ease-in-out infinite alternate;
+  cursor:pointer;
+}
+@keyframes scaledown {
+  0% {
+    transform: scale(2);
+  }
+  
+  100% {
+    transform: scale(1);
+  }
 }
