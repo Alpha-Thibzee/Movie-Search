@@ -9,6 +9,7 @@ import { MovieComponent } from './movie/movie.component';
 import { CommentComponent } from './comment/comment.component';
 import { CommentInfoComponent } from './comment-info/comment-info.component';
 import { CommentListComponent } from './comment-list/comment-list.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CommentListComponent } from './comment-list/comment-list.component';
     MovieComponent,
     CommentComponent,
     CommentInfoComponent,
-    CommentListComponent
+    CommentListComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

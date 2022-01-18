@@ -30,30 +30,13 @@
     
     <div *ngIf="movie.Poster!='N/A'; else elseBlock "><img src="{{ movie.Poster }}" class="img-fluid mb-2" /></div>
     <ng-template #elseBlock><img class="img-fluid mb-2" src="/assets/depositphotos_247872612-stock-illustration-no-image-available-icon-vector.jpg"></ng-template>
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Voir + infos
-</button>
 
-<!-- Modal -->
-<div class="modal fade text-dark" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Voir + infos</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="">Nom du film : {{ movie.Title }}</div>
-        <div class="">Série ou Film : {{ movie.Type }}</div>
-        <div class="">Année : {{ movie.Year }}</div>
-        
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-      </div>
-    </div>
-  </div>
+    <button onclick="" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Launch demo modal
+    </button>
+    <app-modal [movie]='movie'></app-modal>
+
 </div>
   </div>
-</div>
+
+
