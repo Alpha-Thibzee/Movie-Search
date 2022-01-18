@@ -24,12 +24,16 @@
 <div class="row flex text-center mt-3 m-0 p-0">
   <div
     *ngFor="let movie of movieData"
-    class="col-md-3 mx-auto fw-bold border border-4 rounded mt-3 text-white text-center"
-  >
+    class="col-md-3 mx-auto fw-bold border border-4 rounded mt-3 text-white text-center">
     <div class="">Nom du film : {{ movie.Title }}</div>
     <div class="">Série ou Film : {{ movie.Type }}</div>
     <div class="">Année : {{ movie.Year }}</div>
-    <div class="">Poster :</div>
-    <img src="{{ movie.Poster }}" class="img-fluid mb-2" />
+    <div *ngIf="" class="">Poster :</div>
+    
+    <div *ngIf="movie.Poster!='N/A'; else elseBlock "><img src="{{ movie.Poster }}" class="img-fluid mb-2" /></div>
+    <ng-template #elseBlock><img class="img-fluid mb-2" src="/assets/depositphotos_247872612-stock-illustration-no-image-available-icon-vector.jpg"></ng-template>
+    <script>
+      
+    </script>
   </div>
 </div>

@@ -28,6 +28,7 @@ export class MovieComponent implements OnInit {
     //this.movieData=data;
     this.movieData=data.Search;
     
+    
     //this.movieData.imdbID = (this.movieData.imdbID);
     this.movieData.Title = (this.movieData.Title);
     this.movieData.Type = (this.movieData.Type);
@@ -37,7 +38,7 @@ export class MovieComponent implements OnInit {
     searchMovie() : void{
       //this.getMovieData();
       if (this.movie == '' || this.movie.length <= 2) {
-        alert('Mets un film valide batard');
+        alert('Mets un film valide !!!');
         
       }else{
       this.getMovieData();

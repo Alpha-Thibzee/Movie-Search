@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
       setInterval(()=>{
         this.livetimer = moment().format('HH:mm:ss')
       }, 1000); 
-  
+      
   }
    
 
