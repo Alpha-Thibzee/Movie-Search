@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class MovieComponent implements OnInit {
 
   movie : string = '';
+  
   movieData : any;
   constructor() { }
 
@@ -29,11 +30,13 @@ export class MovieComponent implements OnInit {
     this.movieData=data.Search;
     
     
-    //this.movieData.imdbID = (this.movieData.imdbID);
+    /*this.movieData.imdbID = (this.movieData.imdbID);
     this.movieData.Title = (this.movieData.Title);
     this.movieData.Type = (this.movieData.Type);
     this.movieData.Year = (this.movieData.Year);
     this.movieData.Poster = (this.movieData.Poster);
+    this.movieData.Id = (this.movieData.imdbID)  ;*/
+    
   }
     searchMovie() : void{
       //this.getMovieData();
@@ -44,5 +47,6 @@ export class MovieComponent implements OnInit {
       this.getMovieData();
     }
     } 
+    
 } 
 //

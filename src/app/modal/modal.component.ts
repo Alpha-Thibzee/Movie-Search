@@ -8,6 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ModalComponent implements OnInit {
 
+  
+
   @Input() public movie!:any;
 
   constructor() { }
@@ -15,5 +17,7 @@ export class ModalComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.movie);
   }
+
+  
 
 }
