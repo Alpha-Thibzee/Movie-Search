@@ -21,22 +21,21 @@
     </form>
   </div>
 </div>
-<div class="row flex text-center mt-3 m-0 p-0">
+<div class="row flex d-flex align-items-center justify-content-center text-center mt-3 m-0 p-0">
   <div
     *ngFor="let movie of movieData"
-    class="col-md-3 mx-auto fw-bold border border-4 rounded mt-3 text-white text-center">
+    class="col-md-3 me-5 mb-3 fw-bold border border-4 rounded mt-3 text-white text-center">
     
     <div class="">Nom du film : {{ movie.Title }}</div>
     <div *ngIf="" class="">Poster :</div>
-    
     <div *ngIf="movie.Poster!='N/A'; else elseBlock "><img src="{{ movie.Poster }}" class="img-fluid mb-2" /></div>
     <ng-template #elseBlock><img class="img-fluid mb-2" src="/assets/depositphotos_247872612-stock-illustration-no-image-available-icon-vector.jpg"></ng-template>
      <div class="row"> 
-    <button  type="button" class="col-md-6 text-center mx-auto btn btn-primary" data-bs-toggle="modal" attr.data-bs-target="#movieModal-{{movie.imdbID}}">
+    <button  type="button" (mouseover)="getMovieDatasupp(movie.imdbID)" class="col-md-6 text-center fw-bold mb-2 text-white mx-auto btn btn-danger" data-bs-toggle="modal" attr.data-bs-target="#movieModal-{{movie.imdbID}}">
       Obtenir plus d'infos
     </button>
     </div>
-    <app-modal [movie]='movie'></app-modal>
+    <app-modal *ngIf="modal" [movieDatasupp]='movieDatasupp'></app-modal>
 
 </div>
   </div>

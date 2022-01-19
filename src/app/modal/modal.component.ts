@@ -10,12 +10,12 @@ export class ModalComponent implements OnInit {
 
   
 
-  @Input() public movie!:any;
+  @Input() public movieDatasupp!:any;
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.movie);
+    // console.log(this.movie);
   }
 
   

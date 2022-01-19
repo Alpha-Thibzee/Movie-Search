@@ -1,7 +1,7 @@
 
   
   <!-- Modal -->
-  <div class="modal fade text-dark" id="movieModal-{{movie.imdbID}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade text-dark" id="movieModal-{{movieDatasupp.imdbID}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -9,13 +9,19 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body flex flex-column">
-          <div *ngIf="movie.Poster!='N/A'; else elseBlock "><img src="{{ movie.Poster }}" class="img-fluid mb-2" /></div>
+          <div *ngIf="movieDatasupp.Poster!='N/A'; else elseBlock "><img src="{{ movieDatasupp.Poster }}" class="img-fluid mb-2" /></div>
             <ng-template #elseBlock><img class="img-fluid mb-2" src="/assets/depositphotos_247872612-stock-illustration-no-image-available-icon-vector.jpg"></ng-template>
           <div class="row">
-          <p>Nom du film {{ movie.Title }}</p>
-          <p>Année du film {{ movie.Year }}</p>
-          <p>Type de contenu : {{ movie.Type }}</p>
-          
+          <p>Nom du film : {{ movieDatasupp.Title }}</p>
+          <p>Année du film : {{ movieDatasupp.Year }}</p>
+          <p>Type de contenu : {{ movieDatasupp.Type }}</p>
+          <p>Acteurs : {{ movieDatasupp.Actors }}</p>
+          <p>Réalisateur : {{ movieDatasupp.Writer }}</p>
+          <p>Synopsis : {{ movieDatasupp.Plot }}</p>
+          <p>Réalisation : {{ movieDatasupp.Released }}</p>
+          <p>Durée du film : {{ movieDatasupp.Runtime }}</p>
+          <p>Nombres de votes : {{ movieDatasupp.imdbVotes }}</p>
+          <p>Notation ( sur 10 ) : {{ movieDatasupp.imdbRating }}</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
